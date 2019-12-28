@@ -8,4 +8,4 @@
 ## 启动说明
 
     - 打开并运行xyz.yunzhongyan.www.Application.java
-    - 打开浏览器，接口文档(http://49.235.37.9:8080/fsn/swagger-ui.html#!)
+    - 打开浏览器，接口文档(http://127.0.0.1:8080/fsn/swagger-ui.html#!)
