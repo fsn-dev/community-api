@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/mip_yunzhongyan?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+    username: #####
+    password: #####
+  data:
+    mongodb:
+      host: 127.0.0.1
+      port: 27017
+      database: fsn
+      username: #####
+      password: #####
+      field-naming-strategy: org.springframework.data.mapping.model.SnakeCaseFieldNamingStrategy
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password: #####
+    pool:
+      max-active: 8
+      max-wait: -1
+      max-idle: 8
+      min-idle: 0
+    timeout: 0
+  http:
+    multipart:
+      maxFileSize: 10MB
+      maxRequestSize: 10MB
+
+logging:
+  config: classpath:logback.xml
+
+server:
+  port: 8080
+  contextPath: /fsn
