@@ -2,21 +2,21 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/mip_yunzhongyan?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
-    username: #####
-    password: #####
+    username: mip_yunzhongyan
+    password: SCwwhwnh6AZb26Ty
   data:
     mongodb:
       host: 127.0.0.1
       port: 27017
       database: fsn
-      username: #####
-      password: #####
+      username: fsn
+      password: SCwwhwnh6AZb26Ty
       field-naming-strategy: org.springframework.data.mapping.model.SnakeCaseFieldNamingStrategy
   redis:
     database: 0
     host: 127.0.0.1
     port: 6379
-    password: #####
+    password: SCwwhwnh6AZb26Ty
     pool:
       max-active: 8
       max-wait: -1
