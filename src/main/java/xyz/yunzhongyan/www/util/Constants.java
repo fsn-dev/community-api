@@ -35,7 +35,7 @@ public class Constants {
     //这里填写在GitHub上注册应用时候获得 CLIENT_SECRET
     public static final String CLIENT_SECRET = "8367b144f4783c60178b2f95d55c8beb02f76f40";
     // 回调路径
-    public static final String CALLBACK = "http://www.yunzhongyan.xyz:8688/oauth/redirect";
+    public static final String CALLBACK = "https://fsn.dev/oauth/redirect";
 
     //获取code的url
     public static final String CODE_URL = "https://github.com/login/oauth/authorize?client_id=" + CLIENT_ID + "&state=STATE&redirect_uri=" + CALLBACK + "";

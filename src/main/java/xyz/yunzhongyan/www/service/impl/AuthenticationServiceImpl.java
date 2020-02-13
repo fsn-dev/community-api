@@ -95,7 +95,7 @@ public class AuthenticationServiceImpl implements xyz.yunzhongyan.www.service.Au
         User user1 = users.get(0);
         user1.setPasswordEmailCode(UUID.randomUUID().toString() + new Date().getTime());
         //发送邮件
-        String result = emailServiceImpl.sendPasswordEmail(user1.getUsername(), user1.getMailbox(), "http://www.yunzhongyan.xyz:8688/resetPassword?emailCode=" + user1.getPasswordEmailCode(), user1.getPasswordEmailCode());
+        String result = emailServiceImpl.sendPasswordEmail(user1.getUsername(), user1.getMailbox(), "https://fsn.dev/resetPassword?emailCode=" + user1.getPasswordEmailCode(), user1.getPasswordEmailCode());
         if (result.contains("success")) {
             User user = userServiceImpl.saveUser(user1);
             return Result.success(mailboxVo).message("邮件已发送，请去邮箱查看确认。");
@@ -137,7 +137,7 @@ public class AuthenticationServiceImpl implements xyz.yunzhongyan.www.service.Au
     public Result sendRegisterEmail(RegisterEmail registerEmail) {
         User one = userDao.findOne(registerEmail.getUserId());
         //发送邮件
-        String result = emailServiceImpl.sendRegisterEmail(one.getUsername(), one.getMailbox(), "http://www.yunzhongyan.xyz:8688/validateSuccess?emailCode=" + one.getRegisterEmailCode(), one.getRegisterEmailCode());
+        String result = emailServiceImpl.sendRegisterEmail(one.getUsername(), one.getMailbox(), "https://fsn.dev/validateSuccess?emailCode=" + one.getRegisterEmailCode(), one.getRegisterEmailCode());
         if (result.contains("success")) {
 //            one.setRegisterEmailCode(null);
             User user = userServiceImpl.saveUser(one);
@@ -161,7 +161,7 @@ public class AuthenticationServiceImpl implements xyz.yunzhongyan.www.service.Au
         authenticationQuery.setUsername(authenticationQuery.getUsername());
         authenticationQuery.setPassword(authenticationQuery.getPassword());
         //发送邮件
-        String result = emailServiceImpl.sendRegisterEmail(authenticationQuery.getUsername(), authenticationQuery.getMailbox(), "http://www.yunzhongyan.xyz:8688/validateSuccess?emailCode=" + register.getRegisterEmailCode(), register.getRegisterEmailCode());
+        String result = emailServiceImpl.sendRegisterEmail(authenticationQuery.getUsername(), authenticationQuery.getMailbox(), "https://fsn.dev/validateSuccess?emailCode=" + register.getRegisterEmailCode(), register.getRegisterEmailCode());
         if (result.contains("success")) {
             User user = userServiceImpl.saveUser(register);
             User user1 = new User();
