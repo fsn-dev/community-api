@@ -13,9 +13,9 @@ public class Constants {
     /**
      * 文件上传URL
      */
-    public static final String IMAGE_SERVER = "http://49.235.37.9:1186/";
 
-    /**
+
+    /**public static final String IMAGE_SERVER = "https://fsn.dev:1186/";
      * 存储当前登录用户id的字段名
      */
     public static final String CURRENT_USER_ID = "currentUserId";

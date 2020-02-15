@@ -136,7 +136,7 @@ public class ArticleServiceImpl implements ArticleService {
             article1.setAuthor(article.getAuthor());
             article1.setKeyWord(article.getKeyWord());
             if (EmptyUtil.isEmpty(article.getThumbPath())) {
-                article1.setThumbPath("http://49.235.37.9:1186/demo.jpg");
+                article1.setThumbPath("http://fsn.dev:1186/demo.jpg");
             } else {
                 article1.setThumbPath(article.getThumbPath());
             }
