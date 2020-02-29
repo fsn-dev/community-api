@@ -10,10 +10,7 @@ import xyz.yunzhongyan.www.util.Constants;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 
 @Component
@@ -26,11 +23,12 @@ public class FileServiceImpl {
         try {
             if (file == null || file.isEmpty()) return "";
             String fileName = file.getOriginalFilename();
-            log.info("文件名"+fileName);
+            Date date = new Date();
+            log.info("文件名" + fileName);
             //String suffixName = fileName.substring(fileName.lastIndexOf("."));
             String filePath = Constants.IMAGE_PATH;
             //fileName = UUID.randomUUID() + suffixName;
-            File dest = new File(filePath + fileName);
+            File dest = new File(filePath + date.getTime() + fileName);
             if (!dest.getParentFile().exists())
                 dest.getParentFile().mkdirs();
             file.transferTo(dest);
