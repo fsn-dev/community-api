@@ -60,12 +60,12 @@ public class ArticleServiceImpl implements ArticleService {
         Article less = articleDao.findFirstByCreateTimeLessThanOrderByCreateTimeDesc(article.getCreateTime());
         ArticleVo2 lessVo = new ArticleVo2();
         ArticleVo2 greateVo = new ArticleVo2();
-        if (greate!=null){
-            BeanUtils.copyProperties(greate,greateVo);
+        if (greate != null) {
+            BeanUtils.copyProperties(greate, greateVo);
             greateVo.setShow(true);
         }
-        if (less!=null){
-            BeanUtils.copyProperties(less,lessVo);
+        if (less != null) {
+            BeanUtils.copyProperties(less, lessVo);
             lessVo.setShow(true);
         }
         articleDetailVo.setDetail(articleVo);
@@ -136,7 +136,7 @@ public class ArticleServiceImpl implements ArticleService {
             article1.setAuthor(article.getAuthor());
             article1.setKeyWord(article.getKeyWord());
             if (EmptyUtil.isEmpty(article.getThumbPath())) {
-                article1.setThumbPath("http://fsn.dev:1186/demo.jpg");
+                article1.setThumbPath("http://47.52.214.100:1186/demo.jpg");
             } else {
                 article1.setThumbPath(article.getThumbPath());
             }
